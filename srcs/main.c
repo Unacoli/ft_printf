@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/08 15:58:15 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/08 16:24:34 by nargouse         ###   ########.fr       */
+/*   Created: 2021/08/17 15:06:51 by nargouse          #+#    #+#             */
+/*   Updated: 2021/08/17 16:56:00 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include "../include/ft_printf.h"
 
-int	ft_tolower(int c)
+int main()
 {
-	if (c >= 'A' && c <= 'Z')
-		c = c + 32;
-	return (c);
+	printf("%d\n", ft_printf("nootnoot%d\n", -1516845156));
 }

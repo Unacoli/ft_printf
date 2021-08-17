@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_flag_s.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/07 17:40:46 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/15 17:20:30 by nargouse         ###   ########.fr       */
+/*   Created: 2021/08/17 15:39:28 by nargouse          #+#    #+#             */
+/*   Updated: 2021/08/17 15:49:21 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_bzero(void *s, size_t n)
+int ft_flag_s(va_list va, int *p_char)
 {
-	ft_memset(s, 0, n);
-	return (s);
+	char	*s;
+	int		i;
+
+	i = 0;
+	s = va_arg(va, char *);
+
+	while (s[i])
+		i++;
+	if (write(1, s, i) == -1)
+		return (-1);
+	*p_char += i;
+	return (0);
 }

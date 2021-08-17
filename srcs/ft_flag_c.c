@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_flag_c.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 15:04:11 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/17 15:11:36 by nargouse         ###   ########.fr       */
+/*   Created: 2021/08/17 15:34:12 by nargouse          #+#    #+#             */
+/*   Updated: 2021/08/17 15:49:31 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int ft_flag_c(va_list va, int *p_char)
 {
-	size_t	i;
-	size_t	j;
+	char	c;
 
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	i = 0;
-	while (haystack[i] && i < len)
-	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && (i + j) < len)
-		{
-			j++;
-			if (needle[j] == '\0')
-				return ((char *)haystack + i);
-		}
-		i++;
-	}
-	return (NULL);
+	c = va_arg(va, int);
+	if (write(1, &c, 1) == -1)
+		return (-1);
+	(*p_char)++;
+	return (0);
 }

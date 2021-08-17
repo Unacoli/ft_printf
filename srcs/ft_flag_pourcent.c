@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_flag_pourcent.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/07 18:04:39 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/17 14:47:43 by nargouse         ###   ########.fr       */
+/*   Created: 2021/08/17 15:49:43 by nargouse          #+#    #+#             */
+/*   Updated: 2021/08/17 15:51:18 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isascii(int c)
+int ft_flag_pourcent(va_list va, int *p_char)
 {
-	return (c >= 0 && c <= 127);
+	if (write(1, "%", 1) == -1)
+		return (-1);
+	(*p_char)++;
+	return (0);
 }
