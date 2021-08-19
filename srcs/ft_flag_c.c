@@ -6,13 +6,13 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:34:12 by nargouse          #+#    #+#             */
-/*   Updated: 2021/08/17 15:49:31 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/08/19 16:15:01 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_flag_c(va_list va, int *p_char)
+int	ft_flag_c(va_list va, int *p_char)
 {
 	char	c;
 

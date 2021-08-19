@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:51:40 by nargouse          #+#    #+#             */
-/*   Updated: 2021/08/17 16:57:33 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/08/19 16:15:47 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 static int	ft_unsigned_nbr(unsigned int u, int *p_char)
 {
-	char c;
+	char	c;
 
 	if (u > 9)
 	{
 		if (ft_unsigned_nbr(u / 10, p_char))
-		   return (-1);
+			return (-1);
 		return (ft_unsigned_nbr(u % 10, p_char));
 	}
 	c = u + '0';
@@ -31,7 +31,7 @@ static int	ft_unsigned_nbr(unsigned int u, int *p_char)
 
 static int	ft_signed_nbr(int i, int *p_char)
 {
-	char c;
+	char	c;
 
 	if (i == INT_MIN)
 	{
@@ -50,7 +50,7 @@ static int	ft_signed_nbr(int i, int *p_char)
 	if (i > 9)
 	{
 		if (ft_signed_nbr(i / 10, p_char))
-		   return (-1);
+			return (-1);
 		return (ft_signed_nbr(i % 10, p_char));
 	}
 	c = i + '0';
@@ -60,7 +60,7 @@ static int	ft_signed_nbr(int i, int *p_char)
 	return (0);
 }
 
-int ft_flag_u(va_list va, int *p_char)
+int	ft_flag_u(va_list va, int *p_char)
 {
 	unsigned int	u;
 
@@ -70,7 +70,7 @@ int ft_flag_u(va_list va, int *p_char)
 	return (0);
 }
 
-int ft_flag_di(va_list va, int *p_char)
+int	ft_flag_di(va_list va, int *p_char)
 {
 	int	i;
 
@@ -78,14 +78,4 @@ int ft_flag_di(va_list va, int *p_char)
 	if (ft_signed_nbr(i, p_char) == -1)
 		return (-1);
 	return (0);
-}
-
-int ft_flag_p(va_list va, int *p_char)
-{
-
-}
-
-int ft_flag_x(va_list va, int *p_char, char format)
-{
-
 }
