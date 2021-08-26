@@ -6,7 +6,7 @@
 #    By: nargouse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 14:54:05 by nargouse          #+#    #+#              #
-#    Updated: 2021/08/17 14:38:21 by nargouse         ###   ########.fr        #
+#    Updated: 2021/08/26 14:29:13 by nargouse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libftprintf.a
 INCLUDE = ./include
 CFLAGS	+= -g -Wall -Werror -Wextra
 
-SRCS	= 
+SRCS	=  
 
 OBJS		= $(SRCS:.c=.o)
 
