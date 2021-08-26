@@ -6,13 +6,15 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 16:10:33 by nargouse          #+#    #+#             */
-/*   Updated: 2021/08/19 16:12:34 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/08/26 16:43:25 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_flag_p(va_list va, int *p_char)
 {
-
+	va = 0;
+	*p_char = 0;
+	return (0);
 }

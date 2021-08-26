@@ -6,25 +6,25 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 16:12:45 by nargouse          #+#    #+#             */
-/*   Updated: 2021/08/26 15:21:24 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/08/26 16:39:58 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 static int	ft_x(int i, int *p_char)
 {
-	char *str;
+	char	*str;
 
 	str = "0123456789abcdef";
-	if(i == 0)
+	if (i == 0)
 	{
 		if (write(1, "0", 1) == -1)
 			return (-1);
 		(*p_char)++;
 		return (0);
 	}
-	while(i)
+	while (i)
 	{
 		if (write(1, &str[i % 16], 1) == -1)
 			return (-1);
@@ -36,17 +36,17 @@ static int	ft_x(int i, int *p_char)
 
 static int	ft_X(int i, int *p_char)
 {
-	char *str;
+	char	*str;
 
 	str = "0123456789ABCDEF";
-	if(i == 0)
+	if (i == 0)
 	{
 		if (write(1, "0", 1) == -1)
 			return (-1);
 		(*p_char)++;
 		return (0);
 	}
-	while(i)
+	while (i)
 	{
 		if (write(1, &str[i % 16], 1) == -1)
 			return (-1);

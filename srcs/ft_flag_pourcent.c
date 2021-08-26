@@ -6,13 +6,13 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:49:43 by nargouse          #+#    #+#             */
-/*   Updated: 2021/08/19 15:15:57 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/08/26 16:40:26 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
-int	ft_flag_pourcent(va_list va, int *p_char)
+int	ft_flag_pourcent(int *p_char)
 {
 	if (write(1, "%", 1) == -1)
 		return (-1);

@@ -6,11 +6,11 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 14:39:46 by nargouse          #+#    #+#             */
-/*   Updated: 2021/08/17 16:38:56 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/08/26 16:40:41 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 static int	ft_conversion(va_list va, const char *format, int *p_char, int *i)
 {
@@ -28,7 +28,7 @@ static int	ft_conversion(va_list va, const char *format, int *p_char, int *i)
 	else if (format[*i] == 'x' || format[*i] == 'X')
 		return (ft_flag_x(va, p_char, format[*i]));
 	else if (format[*i] == '%')
-		return (ft_flag_pourcent(va, p_char));
+		return (ft_flag_pourcent(p_char));
 	else
 		(*i)--;
 	return (0);

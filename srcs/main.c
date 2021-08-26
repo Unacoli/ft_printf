@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:06:51 by nargouse          #+#    #+#             */
-/*   Updated: 2021/08/17 16:56:00 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/08/26 17:09:02 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 int main()
 {
-	printf("%d\n", ft_printf("nootnoot%d\n", -1516845156));
+	printf("%d\n", ft_printf("nootnoote%x\n", 382905710));
+	return (0);
 }

@@ -6,23 +6,30 @@
 #    By: nargouse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 14:54:05 by nargouse          #+#    #+#              #
-#    Updated: 2021/08/26 14:29:13 by nargouse         ###   ########.fr        #
+#    Updated: 2021/08/26 17:17:08 by nargouse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libftprintf.a
-INCLUDE = ./include
+INCLUDE = ./ft_printf/include/
 CFLAGS	+= -g -Wall -Werror -Wextra
 
-SRCS	=  
+SRCS	= ./srcs/ft_flag_c.c ./srcs/ft_flag_pourcent.c ./srcs/ft_printf.c\
+		./srcs/ft_flag_diu.c ./srcs/ft_flag_s.c ./srcs/ft_flag_p.c\
+	   	./srcs/ft_flag_x.c
+
+SRCS_BONUS	=
 
 OBJS		= $(SRCS:.c=.o)
+
+OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
 all:	$(NAME)
 
 $(NAME): $(OBJS)
-	@gcc -I $(INCLUDE) $^ -o $@
-	@ar rcs $(NAME)
+	@ar rcs $@ $^
+
+bonus:
 
 clean:
 		$(RM) $(OBJS)

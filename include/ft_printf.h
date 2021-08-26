@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 14:40:24 by nargouse          #+#    #+#             */
-/*   Updated: 2021/08/17 16:55:02 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/08/26 16:41:08 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ int	ft_flag_p(va_list va, int *p_char);
 int	ft_flag_di(va_list va, int *p_char);
 int	ft_flag_u(va_list va, int *p_char);
 int	ft_flag_x(va_list va, int *p_char, char format);
-int	ft_flag_pourcent(va_list va, int *p_char);
+int	ft_flag_pourcent(int *p_char);
 
 #endif
