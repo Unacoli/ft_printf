@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:06:51 by nargouse          #+#    #+#             */
-/*   Updated: 2021/09/15 20:09:37 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/09/23 19:04:40 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,26 @@ int main()
 	int i;
 
 	str = "abcdef456435";
-	i = 14684351;
+	i = 427295;
 	printf("%x\n", i);
 	printf("%d\n", ft_printf("%x\n", i));
 	printf("%X\n", i);
 	printf("%d\n", ft_printf("%X\n", i));
 	printf("%p\n", str);
 	printf("%d\n", ft_printf("%p\n", str));
+	printf("%d\n", i);
+	printf("%d\n", ft_printf("%d\n", i));
+	printf("%i\n", i);
+	printf("%d\n", ft_printf("%i\n", i));
+	printf("%c\n", str[1]);
+	printf("%d\n", ft_printf("%c\n", str[1]));
+	printf("%%\n");
+	printf("%d\n", ft_printf("%%\n"));
+	printf("%s\n", str);
+	printf("%d\n", ft_printf("%s\n", str));
+	printf("%u\n", i);
+	printf("%d\n", ft_printf("%u\n", i));
+
 
 	return (0);
 }

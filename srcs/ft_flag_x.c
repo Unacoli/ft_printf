@@ -6,7 +6,7 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 16:12:45 by nargouse          #+#    #+#             */
-/*   Updated: 2021/09/16 17:14:23 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/09/23 18:37:39 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,15 @@ static int	ft_x(unsigned int n, int *p_char)
 	return (0);
 }
 
-static int	ft_X(unsigned int n, int *p_char)
+static int	ft_big_x(unsigned int n, int *p_char)
 {
 	char	*hexa;
 
 	hexa = "0123456789ABCDEF";
 	if (n > 15)
 	{
-		ft_X(n / 16, p_char);
-		ft_X(n % 16, p_char);
+		ft_big_x(n / 16, p_char);
+		ft_big_x(n % 16, p_char);
 	}
 	if (n < 16)
 	{
@@ -58,7 +58,7 @@ static int	ft_X(unsigned int n, int *p_char)
 
 int	ft_flag_x(va_list va, int *p_char, char format)
 {
-    unsigned int	n;
+	unsigned int	n;
 
 	n = va_arg(va, unsigned int);
 	if (format == 'x')
@@ -68,7 +68,7 @@ int	ft_flag_x(va_list va, int *p_char, char format)
 	}
 	else if (format == 'X')
 	{
-		if (ft_X(n, p_char) == -1)
+		if (ft_big_x(n, p_char) == -1)
 			return (-1);
 	}
 	return (0);
