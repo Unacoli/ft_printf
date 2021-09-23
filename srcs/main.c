@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:06:51 by nargouse          #+#    #+#             */
-/*   Updated: 2021/09/23 19:04:40 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/09/23 19:08:32 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int main()
 	char *str;
 	int i;
 
-	str = "abcdef456435";
-	i = 427295;
+	str = "";
+	i = 0;
 	printf("%x\n", i);
 	printf("%d\n", ft_printf("%x\n", i));
 	printf("%X\n", i);
