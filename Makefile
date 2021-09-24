@@ -6,7 +6,7 @@
 #    By: nargouse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 14:54:05 by nargouse          #+#    #+#              #
-#    Updated: 2021/09/24 00:06:35 by nargouse         ###   ########.fr        #
+#    Updated: 2021/09/24 18:23:55 by nargouse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,11 +32,6 @@ fclean:	clean
 		$(RM) $(NAME)
 
 re:	fclean all
-
-test: $(OBJS) main.o
-	@cc $(CFLAGS) $(OBJS) main.o -I $(INCLUDE) -o test
-	./test
-	@rm test
 
 norm:
 	norminette $(SRCS)
