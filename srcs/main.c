@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:06:51 by nargouse          #+#    #+#             */
-/*   Updated: 2021/09/23 23:30:21 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/09/24 17:25:07 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int main()
 	int i;
 
 	str = "riche";
-	//str = NULL;
 	i = -42;
 	printf("%x\n", i);
 	printf("%d\n", ft_printf("%x\n", i));

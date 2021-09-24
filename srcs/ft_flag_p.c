@@ -6,11 +6,19 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 16:10:33 by nargouse          #+#    #+#             */
-/*   Updated: 2021/09/16 16:52:52 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/09/24 17:23:09 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
+
+static int	ft_long_abs(long i, int *p_char)
+{
+	if (write(1, "ffffffff", 8) == -1)
+		return (-1);
+	*p_char += 8;
+	return (0);
+}
 
 static int	ft_putchar(char c, int *p_char)
 {
@@ -20,13 +28,13 @@ static int	ft_putchar(char c, int *p_char)
 	return (0);
 }
 
-static int	ft_p(long i, char *hexa, int *p_char)
+static int	ft_p(unsigned long i, char *hexa, int *p_char)
 {
-	if (i < 0)
+	if (i == LONG_MIN || i == LONG_MAX)
 	{
-		if (ft_putchar('-', p_char) == -1)
+		if (ft_long_abs(i, p_char) == -1)
 			return (-1);
-		i *= -1;
+		return (0);
 	}
 	if (i > 15)
 	{
@@ -43,7 +51,7 @@ static int	ft_p(long i, char *hexa, int *p_char)
 
 int	ft_flag_p(va_list va, int *p_char)
 {
-	long	str;
+	unsigned long	str;
 	char	*hexa;
 
 	hexa = "0123456789abcdef";
