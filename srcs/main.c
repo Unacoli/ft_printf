@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:06:51 by nargouse          #+#    #+#             */
-/*   Updated: 2021/09/24 17:25:07 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/09/24 17:50:52 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int main()
 
 	str = "riche";
 	i = -42;
+	printf("%p\n %p\n", LONG_MIN, LONG_MAX);
+	printf("%d\n", ft_printf("%p\n %p\n", LONG_MIN, LONG_MAX);
 	printf("%x\n", i);
 	printf("%d\n", ft_printf("%x\n", i));
 	printf("%X\n", i);
