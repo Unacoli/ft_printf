@@ -6,13 +6,13 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 15:51:40 by nargouse          #+#    #+#             */
-/*   Updated: 2021/09/23 18:58:12 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/09/23 23:33:54 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-static int	ft_intmin(int i, int *p_char)
+static int	ft_intmin(int *p_char)
 {
 	if (write(1, "-2147483648", 11) == -1)
 		return (-1);
@@ -42,7 +42,7 @@ static int	ft_signed_nbr(int i, int *p_char)
 	char	c;
 
 	if (i == INT_MIN)
-		return (ft_intmin(i, p_char));
+		return (ft_intmin(p_char));
 	if (i < 0)
 	{
 		if (write(1, "-", 1) == -1)

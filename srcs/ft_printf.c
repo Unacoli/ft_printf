@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 14:39:46 by nargouse          #+#    #+#             */
-/*   Updated: 2021/09/15 17:30:09 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/09/23 23:16:36 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,27 +37,25 @@ static int	ft_conversion(va_list va, const char *format, int *p_char, int *i)
 static int	ft_while(va_list va, const char *format, int *p_char)
 {
 	int	i;
-	int	error;
 
 	i = 0;
-	error = 0;
-	while (format[i] && error == 0)
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			if (ft_conversion(va, format, p_char, &i) == -1)
-				error = 1;
+				return (-1);
 		}	
 		else
 		{
 			if (write(1, &format[i], 1) == -1)
-				error = 1;
+				return (-1);
 			*p_char += 1;
 		}
 		i++;
 	}
 	va_end(va);
-	return (error);
+	return (0);
 }
 
 int	ft_printf(const char *format, ...)
